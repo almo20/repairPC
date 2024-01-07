@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="infos.html">Infos</a>
+        <a href="service.html" class="active">Service</a>
+    </nav>
+    <header>
+        <h1>PC Repair</h1>
+    </header>
+    <main class="main-form">
+        <h2>Kontaktiere uns!</h2>
+
+        <div class="container-form">
+            <div class="card-left">
+                <h3>Formular</h3>
+                <form action="ausgabe.php" method="post" >
+                    <div class="anrede">
+                        <label for="anrede">Anrede:</label>
+                        <input type="radio" value="Herr" name="anrede" id="herr" checked><label for="herr">Herr</label>
+                        <input type="radio" value="Frau" name="anrede" id="frau"><label for="frau">Frau</label>
+                    </div>
+                    <div class="formular">
+                        <label for="vorname">Vorname:</label>
+                        <input type="text" name="vorname" id="vorname">
+                    </div>
+                    <div class="formular">
+                        <label for="nachname">Nachname:</label>
+                        <input type="text" name="nachname" id="nachname">
+                    </div>
+                    <div class="formular">
+                        <label for="strasse">Strasse:</label>
+                        <input type="text" name="strasse" id="strasse">
+                    </div>
+                    <div class="formular">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="formular">
+                        <label for="telefon">Telefon:</label>
+                        <input type="text" name="telefon" id="telefon">
+                    </div>
+                    <div class="formular">
+                        <label for="reparaturtyp">Reparatur:</label>
+                        <select name="reparaturtyp" id="reparaturtyp">
+                            <option value="PC Laptop">PC Laptop</option>
+                            <option value="PC Desktop">PC Desktop</option>
+                            <option value="Microcomputer">Microcomputer</option>
+                            <option value="Nanocomputer">Nanocomputer</option>
+                            <option value="Server">Server</option>
+                        </select>
+                    </div>
+                    <div class="formular">
+                        <label for="anmerkung">Anmerkung:</label>
+                        <textarea name="anmerkung" id="anmerkung" cols="20" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Absenden">
+                    </div>
+                </form>
+            </div>
+            <div class="card-right">
+                <h3>Kontakt</h3>
+                <ul class="list">
+                    <li><p><span>&#127960;</span> Dieselstr. 13, Eching</p></li>
+                    <li><p><span>&#128383;</span> 082/ 451825</p></li>
+                    <li><p><span>&#128386;</span> PC_repair@yahoo.com</p></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <div class="slide-container">
+            <h3>Von Kunde</h3>
+            <div class="my-slides fade dot">
+                <p><em>"Lorem ipsum dolor sit amet consectetur."</em><br><strong>John Doe</strong></p>
+            </div>
+
+            <div class="my-slides fade dot">
+                <p><em>"Lorem ipsum dolor sit amet consectetur."</em><br><strong>Max Mustermann</strong></p>
+            </div>
+
+            <div class="my-slides fade dot">
+                <p><em>"Lorem ipsum dolor sit amet consectetur."</em><br><strong>Karina Hill</strong></p>
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <p>&copy; PC Repair</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+body {
+  background-color: lightgray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav,
+footer {
+  background-color: rgb(2, 49, 2);
+  color: white;
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 15px;
+}
+
+nav a:hover {
+  background-color: rgb(47, 73, 47);
+}
+
+.active {
+  font-weight: bold;
+  /* background-color: rgb(47, 73, 47); */
+}
+
+header {
+  text-align: center;
+  background-color: white;
+  color: rgb(2, 49, 2);
+  font-size: 200%;
+  padding: 20px;
+}
+
+header h1{
+  margin: 0;
+  font-weight: normal;
+  animation: slideToRight 1s ease-in;
+  behavior: smooth;
+}
+
+@keyframes slideToRight{
+  from{
+    transform: translateX(-20%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+
+
+main {
+  width: 50rem;
+  margin: auto;
+  padding: 50px;
+}
+
+main img {
+  width: 100%;
+}
+
+.description {
+  margin: 0;
+  color: gray;
+}
+
+.container {
+  display: flex;
+}
+
+.container-form {
+  display: block;
+}
+
+.card-left {
+  flex: 50%;
+}
+
+.card-right {
+  flex: 50%;
+  padding-left: 10px;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  img{
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+    
+  }
+
+}
+
+.formular {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0 0 10px;
+}
+
+.main-form {
+  text-align: center;
+  width: 20rem;
+}
+
+.anrede {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.list {
+  text-align: left;
+}
+
+aside {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  width: 30%;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    display: block;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  main h2 {
+    text-align: center;
+  }
+
+  .card-left {
+    padding-left: 10px;
+  }
+
+  .main-form {
+    text-align: center;
+    margin: auto;
+  }
+
+  aside{
+    width: 80%;
+  }
+}
